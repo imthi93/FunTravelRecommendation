@@ -8,6 +8,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 function showrecommendation(event){
     event.preventDefault();
     const recommendationInput = document.getElementById('recommendation').value.toLowerCase();
+    document.querySelector('.recommendation-results').innerHTML = '';
     const recommendationInfo = document.querySelector('.recommendation-results');
     console.log(recommendationInput);
     let recommendation = '';
