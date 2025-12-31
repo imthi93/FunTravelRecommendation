@@ -1,5 +1,10 @@
 document.getElementById('search-recommendation').addEventListener('click', showrecommendation);
 document.getElementById('reset-recommendation').addEventListener('click', resetrecommendation); 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for contacting us! We will get back to you shortly.');
+    document.getElementById('contact-form').reset();
+});
 function showrecommendation(event){
     event.preventDefault();
     const recommendationInput = document.getElementById('recommendation').value.toLowerCase();
