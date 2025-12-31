@@ -13,8 +13,22 @@ function showrecommendation(event){
             recommendation = data[recommendationInput];
             console.log(recommendation);
             let output = '';
+            
             if (recommendation && Array.isArray(recommendation)) {
+                // Flatten nested arrays (e.g., cities inside countries)
+                let flatData = [];
                 recommendation.forEach(item => {
+                    if (item.cities && Array.isArray(item.cities)) {
+                        // If item has nested cities, add all cities to flatData
+                        flatData.push(...item.cities);
+                    } else {
+                        // Otherwise, add the item directly (for flat structures like beaches, temples)
+                        flatData.push(item);
+                    }
+                });
+                
+                // Now render all items
+                flatData.forEach(item => {
                     console.log(item.name);
                     console.log(item.description);
                     console.log(item.imageUrl);          
