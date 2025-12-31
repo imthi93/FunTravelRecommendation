@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Travel Recommendations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .main-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 20px;
+            align-items: start;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 50px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .recommendation-results {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0;
+            grid-column: 2;
+            background: transparent;
+        }
+
+        .recommendation-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            padding: 20px;
+        }
+
+        .recommendation-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .recommendation-item h2 {
+            font-size: 18px;
+            color: #222;
+            margin: 0 0 10px 0;
+        }
+
+        .recommendation-item p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="social-sidebar">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <nav>
+        <h1>Fun Travel Recommendations</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="recommendation" placeholder="Search destinations...">
+            <button type="button" id="search-recommendation">Search</button>
+            <button type="reset" id = "reset-recommendation">Reset</button>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <h2 id="explain">Welcome to </h2>
+            <h1 id="explain">Fun Travel Recommendations</h1>
+            <p id="explain">Discover the world's most exciting destinations and plan your next adventure with us. 
+            Whether you're looking for relaxation on pristine beaches, adventure in mountain ranges, 
+            or cultural experiences in historic cities, we have the perfect travel recommendations for you. 
+            Explore, dream, and travel with confidence!</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        <div class="recommendation-results">
+            
+    </div>
+    <script src="./travel_recommendation.js"></script>
+</body>
+</html>

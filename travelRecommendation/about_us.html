@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fun Travel Recommendation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Grid layout: single column on small screens, 3 columns on desktop */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        /* Ensure the heading spans the full width of the grid */
+        .container h2 {
+            grid-column: 1 / -1;
+            text-align: left;
+            margin: 0 0 8px 0;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 24px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            box-sizing: border-box;
+        }
+
+        .team-member h3 {
+            font-size: 20px;
+            color: #222;
+            margin: 0 0 6px 0;
+        }
+
+        .team-member p {
+            color: #444;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Alternate background for visual separation */
+        .team-member:nth-of-type(even) {
+            background: rgba(250, 250, 250, 0.9);
+        }
+
+        /* Desktop: 3 columns */
+        @media (min-width: 900px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+                align-items: start;
+            }
+
+            .team-member {
+                padding: 40px 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="social-sidebar">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <nav>
+        <h1>Fun Travel Recommendations</h1>
+        <ul>
+            <li><a href="./travel_recommendation.html">Home</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search destinations...">
+            <button type="button">Search</button>
+            <button type="reset">Reset</button>
+        </div>
+    </nav>
+    <main>
+        <div class="container-hero">
+            <h1>About Us</h1>
+            <p>Your trusted partner in travel exploration</p>
+        </div>
+
+        <div class="container">
+            <h2>Our Team</h2>
+            <section class="team-member">
+                <h3>John Doe - Founder & CEO</h3>
+                <p>Alice is a seasoned traveler with over 15 years of experience in the travel industry. She founded Fun Travel Recommendation to help others discover the joy of travel.</p>
+            </section>
+            <section class="team-member">
+                <h3>Jane Smith - Head of Content</h3>
+                <p>Bob is passionate about writing and has traveled to over 50 countries. He leads our content team to ensure we provide engaging and informative travel recommendations.</p>  
+            </section>
+            <section class="team-member">
+                <h3>Emily Johnson - Marketing Director</h3>
+                <p>Carol has a background in digital marketing and a love for adventure. She oversees our marketing strategies to reach travel enthusiasts worldwide.</p>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
