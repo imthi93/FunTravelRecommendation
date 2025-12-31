@@ -16,7 +16,20 @@ function showrecommendation(event){
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            recommendation = data[recommendationInput];
+            // Search for matching keys using contains (case-insensitive)
+            const matchingKey = Object.keys(data).find(key => 
+                key.toLowerCase().includes(recommendationInput)
+            );
+            recommendation = matchingKey ? data[matchingKey] : null;
+            
+            // If no key match found, search for matching country/item names within arrays
+            if (!recommendation && data.countries && Array.isArray(data.countries)) {
+                const matchingCountries = data.countries.filter(country => 
+                    country.name.toLowerCase().includes(recommendationInput)
+                );
+                recommendation = matchingCountries.length > 0 ? matchingCountries : null;
+            }
+            
             console.log(recommendation);
             let output = '';
             
